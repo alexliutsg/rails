@@ -1,0 +1,29 @@
+<h1>Program Cycles</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @program_cycles.each do |program_cycle| %>
+      <tr>
+        <td><%= program_cycle.name %></td>
+        <td><%= program_cycle.start_date %></td>
+        <td><%= program_cycle.end_date %></td>
+        <td><%= link_to 'View Progress', program_cycle_progresses_path(program_cycle) %></td>
+        <td><%= link_to 'Edit', edit_program_cycle_path(program_cycle) %></td>
+        <td><%= link_to 'Delete', program_cycle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Start a new program cycle', new_program_cycle_path %>

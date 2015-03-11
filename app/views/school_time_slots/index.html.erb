@@ -1,0 +1,35 @@
+<h1>School Time Slots</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>School</th>
+      <th>Date</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Status</th>
+      <th>Remarks</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @school_time_slots.each do |school_time_slot| %>
+      <tr>
+        <td><%= school_time_slot.school_id %></td>
+        <td><%= school_time_slot.date %></td>
+        <td><%= school_time_slot.start_time %></td>
+        <td><%= school_time_slot.end_time %></td>
+        <td><%= school_time_slot.status %></td>
+        <td><%= school_time_slot.remarks %></td>
+        <td><%= link_to 'Show', school_time_slot %></td>
+        <td><%= link_to 'Edit', edit_school_time_slot_path(school_time_slot) %></td>
+        <td><%= link_to 'Destroy', school_time_slot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New School time slot', new_school_time_slot_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>School:</strong>
+  <%= @school_representative.school_id %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @school_representative.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @school_representative.last_name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @school_representative.title %>
+</p>
+
+<%= link_to 'Edit', edit_school_representative_path(@school_representative) %> |
+<%= link_to 'Back', school_representatives_path %>

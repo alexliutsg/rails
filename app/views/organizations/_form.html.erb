@@ -1,0 +1,21 @@
+<%= simple_form_for(@organization) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :region_id %>
+      <%= f.input :organization_type, as: :select, collection: Organization::ORGANIZATION_TYPE %>
+      <%= f.input :primary_name %>
+      <%= f.input :alternative_names %>
+      <%= f.input :address %>
+      <%= f.input :contact_numbers %>
+      <%= f.input :email %>
+      <%= f.input :fax_numbers %>
+      <%= f.input :website %>
+      <%= f.input :contact_persons %>
+      <%= f.input :remarks %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+<% end %>

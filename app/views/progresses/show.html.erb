@@ -1,0 +1,86 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Program cycle:</strong>
+  <%= @program_cycle.name %>
+</p>
+
+<p>
+  <strong>Pitching status:</strong>
+  <%= @progress.pitching_status %>
+</p>
+
+<p>
+  <strong>Pitching remarks:</strong>
+  <%= simple_format(@progress.pitching_remarks) %>
+</p>
+
+<p>
+  <strong>Program status:</strong>
+  <%= @progress.program_status %>
+</p>
+
+<p>
+  <strong>Program remarks:</strong>
+  <%= simple_format(@progress.program_remarks) %>
+</p>
+
+<h2>Organization Detail:</h2>
+<% @organization = @progress.organization %>
+<p>
+  <strong>Region:</strong>
+  <%= @organization.region_id %>
+</p>
+
+<p>
+  <strong>Organization Type:</strong>
+  <%= @organization.organization_type %>
+</p>
+
+<p>
+  <strong>Primary name:</strong>
+  <%= @organization.primary_name %>
+</p>
+
+<p>
+  <strong>Alternative names:</strong>
+  <%= @organization.alternative_names %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @organization.address %>
+</p>
+
+<p>
+  <strong>Contact numbers:</strong>
+  <%= @organization.contact_numbers %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @organization.email %>
+</p>
+
+<p>
+  <strong>Fax numbers:</strong>
+  <%= @organization.fax_numbers %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @organization.website %>
+</p>
+
+<p>
+  <strong>Contact persons:</strong>
+  <%= @organization.contact_persons %>
+</p>
+
+<p>
+  <strong>Remarks:</strong>
+  <%= @organization.remarks %>
+</p>
+
+<%= link_to 'Edit', edit_program_cycle_progress_path(@progress.program_cycle, @progress) %> |
+<%= link_to 'Back', program_cycle_progresses_path %>

@@ -1,0 +1,76 @@
+<h1><%= @program_cycle.name %></h1>
+
+<p id="notice"><%= notice %></p>
+
+
+<table class="table table-bordered">
+  <tr>
+    <td class="col-md-2 info">Start date</td>
+    <td class="col-md-4"><%= @program_cycle.start_date %></td>
+    <td class="col-md-2 info">End date</td>
+    <td class="col-md-4"><%= @program_cycle.end_date %></td>
+  </tr>
+  <tr>
+    <td>Goal</td>
+    <td colspan="3"><%= simple_format(@program_cycle.goal) %></td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td colspan="3"><%= simple_format(@program_cycle.description) %></td>
+  </tr>
+</table>
+
+<div>
+  <a href="<%= edit_program_cycle_path(@program_cycle) %>">
+    <button type="button" class="btn btn-default">
+      Edit
+    </button>
+  </a>
+  <a href="<%= program_cycles_path %>">
+    <button type="button" class="btn btn-default">
+      Back to all program cycles
+    </button>
+  </a>
+</div>
+
+
+<h1>Program Progresses</h1>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>Organization</th>
+    <th>Pitching status</th>
+    <th>Program status</th>
+    <th>Last modified</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @progresses.each do |progress| %>
+      <tr>
+        <td><%= progress.organization.primary_name %></td>
+        <td>
+          <button type="button" class="btn btn-primary btn-xs"><%= progress.pitching_status %></button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-primary btn-xs"><%= progress.program_status %></button>
+        </td>
+        <td><%= progress.updated_at.strftime('%Y-%m-%d %H:%M:%p') %></td>
+        <td><%= link_to 'Display', program_cycle_progress_path(@program_cycle, progress) %></td>
+        <td><%= link_to 'Edit', edit_program_cycle_progress_path(@program_cycle, progress) %></td>
+        <td><%= link_to 'Delete', program_cycle_progress_path(@program_cycle, progress), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div>
+  <a href="<%= new_program_cycle_progress_path(@program_cycle) %>">
+    <button type="button" class="btn btn-default">
+      Add target organization
+    </button>
+  </a>
+</div>

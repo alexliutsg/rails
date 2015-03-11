@@ -1,0 +1,1 @@
+json.extract! @organization, :id, :region_id, :organization_type, :primary_name, :alternative_names, :address, :contact_numbers, :email, :fax_numbers, :website, :contact_persons, :remarks, :created_at, :updated_at

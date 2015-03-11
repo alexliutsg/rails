@@ -1,0 +1,38 @@
+@import "bootstrap-components";
+
+main .content {
+  background-color: #ffffff;
+}
+
+footer {
+  background-color: #ffffff;
+}
+
+.navbar-brand {
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  > img {
+    height: 72px;
+  }
+}
+
+abbr[title="required"] {
+  display: none;
+}
+
+//// SIMPLE FORM -> BOOTSTRAP
+//.form-actions .btn {
+//  @extend .btn;
+//  @extend .btn-primary
+//}
+//
+//form {
+//  margin-bottom: 15px;
+//}
+//
+//form {
+//  input {
+//    box-shadow: none !important;
+//  }
+//}

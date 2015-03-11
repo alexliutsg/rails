@@ -1,0 +1,35 @@
+<h1>Trainer Time Slots</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Trainer</th>
+      <th>Date</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Status</th>
+      <th>Remarks</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trainer_time_slots.each do |trainer_time_slot| %>
+      <tr>
+        <td><%= trainer_time_slot.trainer_id %></td>
+        <td><%= trainer_time_slot.date %></td>
+        <td><%= trainer_time_slot.start_time %></td>
+        <td><%= trainer_time_slot.end_time %></td>
+        <td><%= trainer_time_slot.status %></td>
+        <td><%= trainer_time_slot.remarks %></td>
+        <td><%= link_to 'Show', trainer_time_slot %></td>
+        <td><%= link_to 'Edit', edit_trainer_time_slot_path(trainer_time_slot) %></td>
+        <td><%= link_to 'Destroy', trainer_time_slot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trainer time slot', new_trainer_time_slot_path %>

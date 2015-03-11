@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>School:</strong>
+  <%= @school_time_slot.school_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @school_time_slot.date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @school_time_slot.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @school_time_slot.end_time %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @school_time_slot.status %>
+</p>
+
+<p>
+  <strong>Remarks:</strong>
+  <%= @school_time_slot.remarks %>
+</p>
+
+<%= link_to 'Edit', edit_school_time_slot_path(@school_time_slot) %> |
+<%= link_to 'Back', school_time_slots_path %>

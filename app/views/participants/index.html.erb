@@ -1,0 +1,35 @@
+<h1>Participants Database</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>School</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @participants.each do |participant| %>
+      <tr>
+        <td><%= participant.school_id %></td>
+        <td><%= participant.name %></td>
+        <td><%= participant.email %></td>
+        <td><%= participant.mobile %></td>
+        <td><%= participant.gender %></td>
+        <td><%= participant.age %></td>
+        <td><%= link_to 'Show', participant %></td>
+        <td><%= link_to 'Edit', edit_participant_path(participant) %></td>
+        <td><%= link_to 'Destroy', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Participant', new_participant_path %>

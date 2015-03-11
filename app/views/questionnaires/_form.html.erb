@@ -1,0 +1,21 @@
+<%= simple_form_for(@questionnaire) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :type %>
+      <%= f.input :course_enrollment_id %>
+      <%= f.input :qns_1 %>
+      <%= f.input :qns_2 %>
+      <%= f.input :qns_3 %>
+      <%= f.input :qns_4 %>
+      <%= f.input :qns_5 %>
+      <%= f.input :qns_6 %>
+      <%= f.input :qns_7 %>
+      <%= f.input :qns_8 %>
+      <%= f.input :qns_9 %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+<% end %>

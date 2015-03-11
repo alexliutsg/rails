@@ -1,0 +1,45 @@
+<h1>Questionnaires</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Course enrollment</th>
+      <th>Qns 1</th>
+      <th>Qns 2</th>
+      <th>Qns 3</th>
+      <th>Qns 4</th>
+      <th>Qns 5</th>
+      <th>Qns 6</th>
+      <th>Qns 7</th>
+      <th>Qns 8</th>
+      <th>Qns 9</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questionnaires.each do |questionnaire| %>
+      <tr>
+        <td><%= questionnaire.type %></td>
+        <td><%= questionnaire.course_enrollment_id %></td>
+        <td><%= questionnaire.qns_1 %></td>
+        <td><%= questionnaire.qns_2 %></td>
+        <td><%= questionnaire.qns_3 %></td>
+        <td><%= questionnaire.qns_4 %></td>
+        <td><%= questionnaire.qns_5 %></td>
+        <td><%= questionnaire.qns_6 %></td>
+        <td><%= questionnaire.qns_7 %></td>
+        <td><%= questionnaire.qns_8 %></td>
+        <td><%= questionnaire.qns_9 %></td>
+        <td><%= link_to 'Show', questionnaire %></td>
+        <td><%= link_to 'Edit', edit_questionnaire_path(questionnaire) %></td>
+        <td><%= link_to 'Destroy', questionnaire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Questionnaire', new_questionnaire_path %>

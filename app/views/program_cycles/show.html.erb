@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @program_cycle.name %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @program_cycle.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @program_cycle.end_date %>
+</p>
+
+<p>
+  <strong>Goal:</strong>
+  <%= @program_cycle.goal %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @program_cycle.description %>
+</p>
+
+<%= link_to 'Edit', edit_program_cycle_path(@program_cycle) %> |
+<%= link_to 'Back to all program cycles', program_cycles_path %>

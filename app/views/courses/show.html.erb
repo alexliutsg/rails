@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>School:</strong>
+  <%= @course.school_id %>
+</p>
+
+<p>
+  <strong>Course code:</strong>
+  <%= @course.course_code %>
+</p>
+
+<p>
+  <strong>Acronym:</strong>
+  <%= @course.acronym %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @course.district %>
+</p>
+
+<p>
+  <strong>Contact person:</strong>
+  <%= @course.contact_person %>
+</p>
+
+<p>
+  <strong>Pic:</strong>
+  <%= @course.pic %>
+</p>
+
+<p>
+  <strong>Trainer:</strong>
+  <%= @course.trainer_id %>
+</p>
+
+<p>
+  <strong>First lesson date:</strong>
+  <%= @course.first_lesson_date %>
+</p>
+
+<p>
+  <strong>Last lesson date:</strong>
+  <%= @course.last_lesson_date %>
+</p>
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>

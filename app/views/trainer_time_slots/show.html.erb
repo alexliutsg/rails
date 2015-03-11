@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Trainer:</strong>
+  <%= @trainer_time_slot.trainer_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @trainer_time_slot.date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @trainer_time_slot.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @trainer_time_slot.end_time %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @trainer_time_slot.status %>
+</p>
+
+<p>
+  <strong>Remarks:</strong>
+  <%= @trainer_time_slot.remarks %>
+</p>
+
+<%= link_to 'Edit', edit_trainer_time_slot_path(@trainer_time_slot) %> |
+<%= link_to 'Back', trainer_time_slots_path %>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : 'RunOurCity' %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : 'RunOurCity' %>">
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="page-wrap-site">
+  <%= render 'layouts/header' %>
+  <main role="main">
+    <div class="container content">
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+    </div>
+  </main>
+</div>
+<%= render 'layouts/footer' %>
+
+<%= javascript_include_tag 'application' %>
+</body>
+</html>

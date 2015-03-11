@@ -1,0 +1,18 @@
+<%= simple_form_for [@program_cycle, @progress] do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :program_cycle_id, :as => :hidden %>
+      <!--<%= f.collection_select(:program_cycle_id, ProgramCycle.all, :id, :name, {:selected => @program_cycle.id}) %>-->
+      <!--<%= f.input :organization_id, collection: @program_cycle.target_organizations, :label_method => :primary_name, :value_method => :id, :label => 'Organization Name' %>-->
+      <%= f.input :organization_id, collection: Organization.all, :label_method => :primary_name, :value_method => :id, :label => 'Organization Name' %>
+      <%= f.input :pitching_status, collection: Progress::PITCHING_STATUS %>
+      <%= f.input :pitching_remarks, as: :text %>
+      <%= f.input :program_status, collection: Progress::PROGRAM_STATUS %>
+      <%= f.input :program_remarks, as: :text %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+<% end %>

@@ -1,0 +1,31 @@
+<h1>All School Representatives</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>School</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @school_representatives.each do |school_representative| %>
+      <tr>
+        <td><%= school_representative.school_id %></td>
+        <td><%= school_representative.first_name %></td>
+        <td><%= school_representative.last_name %></td>
+        <td><%= school_representative.title %></td>
+        <td><%= link_to 'Show', school_representative %></td>
+        <td><%= link_to 'Edit', edit_school_representative_path(school_representative) %></td>
+        <td><%= link_to 'Destroy', school_representative, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New School representative', new_school_representative_path %>
